@@ -1,0 +1,148 @@
+@media (max-width: 1024px) {
+  .interesting__container {
+    grid-template-columns: 1fr;
+  }
+
+  .left-column,
+  .right-column {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .small-post,
+  .overlay-post {
+    width: 48%;
+  }
+
+  .video iframe {
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #000;
+    width: 200px;
+    height: 93vh;
+    padding: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+  .news-item {
+    flex: 1 1 calc(50% - 40px);
+    max-width: calc(50% - 40px);
+  }
+
+  .gallery-item {
+    flex: 1 1 calc(50% - 10px);
+  }
+  .left-text {
+    display: none;
+  }
+
+  .slider__content {
+    flex-direction: column;
+  }
+
+  .slider__container {
+    width: 100%;
+  }
+  .slider {
+    padding: 20px;
+  }
+  .prev-btn,
+  .next-btn {
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 5px;
+    font-size: 16px;
+  }
+  .prev-btn {
+    left: 40px;
+  }
+  .next-btn {
+    right: 40px;
+  }
+
+  .culture h2 {
+    font-size: 26px;
+  }
+  .culture-container {
+    grid-template-columns: 1fr;
+  }
+  .left-column {
+    flex-direction: column;
+  }
+
+  .small-post {
+    width: 100%;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .bottom-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .overlay-post {
+    width: 100%;
+  }
+
+  .small-post,
+  .overlay-post {
+    width: 100%;
+  }
+
+  .left-column,
+  .right-column {
+    flex-direction: column;
+  }
+
+  .video iframe {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .news-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .cta-buttons a {
+    margin-bottom: 10px;
+  }
+  .gallery-item {
+    flex: 1 1 100%;
+  }
+
+  .prev-btn {
+    left: 30px;
+  }
+
+  .next-btn {
+    right: 30px;
+  }
+  .video iframe {
+    height: 180px;
+  }
+}
