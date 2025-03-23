@@ -244,6 +244,7 @@
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   text-transform: uppercase;
+  color: #fff;
 }
 
 .slider__container {
