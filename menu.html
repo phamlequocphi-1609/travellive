@@ -3,217 +3,139 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Taco Delights - Menu</title>
+    <title>Taco Delights - About Us</title>
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/responsive.css" />
-    <script src="/js/script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
   <body>
     <!-- Header -->
-    <header>
-      <div class="logo">
-        <a href="index.html">
-          <img
-            src="https://via.placeholder.com/150x80"
-            alt="Taco Delights Logo"
-          />
-        </a>
+    <header
+      class="header"
+      style="
+        background: url('https://i.ex-cdn.com/vntravellive.com/files/news/2025/03/22/dai-tiec-banh-mi-viet-nam-bung-no-tai-le-hoi-banh-mi-tphcm-141038.jpg')
+          center/cover no-repeat;
+        height: 100vh;
+        position: relative;
+      "
+    >
+      <div class="overlay"></div>
+      <div class="container">
+        <nav class="navbar fixed">
+          <div class="logo">
+            <a href="/index.html"
+              ><img
+                src="https://sf.ex-cdn.com/vntravellive.com/v1.1.93/templates/themes/images/logo.png"
+                alt="Travellive Logo"
+            /></a>
+          </div>
+          <button class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="/index.html">About Us</a></li>
+            <li><a href="/menu.html">Menu</a></li>
+            <li><a href="/confirm-order.html">Confirm Order</a></li>
+            <li class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fa fa-search"></i></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="hero-text">
+          <h1>"Đại tiệc" bánh mì Việt Nam bùng nổ tại Lễ hội Bánh mì TP.HCM</h1>
+          <div class="cta-buttons">
+            <a href="#" class="yes">
+              <p><span>Yes</span></p>
+              <p>Take</p>
+              <p>me there</p>
+            </a>
+            <a href="#" class="no">
+              <p><span>No</span></p>
+              <p>Where</p>
+              <p>Else?</p>
+            </a>
+          </div>
+        </div>
       </div>
-      <nav>
-        <ul>
-          <li><a href="index.html">About Us</a></li>
-          <li><a href="menu.html" class="active">Menu</a></li>
-          <li><a href="/confirm-order.html">Confirm Order</a></li>
-        </ul>
-      </nav>
     </header>
-
     <!-- Main Content -->
-    <main class="menu-container">
-      <h1>Our Delicious Tacos</h1>
-
-      <div class="menu-category">
-        <h2>Classic Tacos</h2>
-        <div class="menu-items">
-          <div class="menu-item" data-id="1">
-            <img
-              src="https://via.placeholder.com/300x200"
-              alt="Classic Beef Taco"
-            />
-            <div class="menu-item-details">
-              <h3>Classic Beef Taco</h3>
-              <p class="description">
-                Seasoned ground beef, fresh lettuce, diced tomatoes, and
-                shredded cheese in a crispy corn shell.
-              </p>
-              <div class="price-order">
-                <p class="price">$3.99</p>
-                <button class="add-to-cart">Add to Order</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="menu-item" data-id="2">
-            <img src="https://via.placeholder.com/300x200" alt="Chicken Taco" />
-            <div class="menu-item-details">
-              <h3>Grilled Chicken Taco</h3>
-              <p class="description">
-                Marinated grilled chicken, avocado, pico de gallo, and lime
-                crema in a soft flour tortilla.
-              </p>
-              <div class="price-order">
-                <p class="price">$4.49</p>
-                <button class="add-to-cart">Add to Order</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="menu-item" data-id="3">
-            <img src="https://via.placeholder.com/300x200" alt="Fish Taco" />
-            <div class="menu-item-details">
-              <h3>Baja Fish Taco</h3>
-              <p class="description">
-                Beer-battered fish, cabbage slaw, pickled onions, and chipotle
-                sauce in a corn tortilla.
-              </p>
-              <div class="price-order">
-                <p class="price">$4.99</p>
-                <button class="add-to-cart">Add to Order</button>
-              </div>
-            </div>
+    <section class="menu-container">
+      <h3>Menu</h3>
+      <div class="menu__content">
+        <div class="menu-item">
+          <img
+            src="https://www.huongnghiepaau.com/wp-content/uploads/2022/11/banh-ngon-dai-loan-la-vi-ngay-tet.jpg"
+            alt="Taco Special"
+          />
+          <div class="menu-item__content">
+            <h3>Special Taco</h3>
+            <p>Delicious taco with fresh ingredients.</p>
+            <span class="price">$5.99</span>
+            <a href="#" class="order-btn">Order Now</a>
           </div>
         </div>
-      </div>
-
-      <div class="menu-category">
-        <h2>Specialty Tacos</h2>
-        <div class="menu-items">
-          <div class="menu-item" data-id="4">
-            <img
-              src="https://via.placeholder.com/300x200"
-              alt="Carnitas Taco"
-            />
-            <div class="menu-item-details">
-              <h3>Slow-Cooked Carnitas</h3>
-              <p class="description">
-                Tender pork carnitas, cilantro, onions, and salsa verde on a
-                double corn tortilla.
-              </p>
-              <div class="price-order">
-                <p class="price">$4.79</p>
-                <button class="add-to-cart">Add to Order</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="menu-item" data-id="5">
-            <img src="https://via.placeholder.com/300x200" alt="Shrimp Taco" />
-            <div class="menu-item-details">
-              <h3>Spicy Shrimp Taco</h3>
-              <p class="description">
-                Cajun-spiced shrimp, mango salsa, lettuce, and avocado crema in
-                a flour tortilla.
-              </p>
-              <div class="price-order">
-                <p class="price">$5.49</p>
-                <button class="add-to-cart">Add to Order</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="menu-item" data-id="6">
-            <img src="https://via.placeholder.com/300x200" alt="Vegan Taco" />
-            <div class="menu-item-details">
-              <h3>Plant-Based Delight</h3>
-              <p class="description">
-                Seasoned plant-based protein, roasted vegetables, guacamole, and
-                vegan cheese in a corn tortilla.
-              </p>
-              <div class="price-order">
-                <p class="price">$4.99</p>
-                <button class="add-to-cart">Add to Order</button>
-              </div>
-            </div>
-          </div>
+        <div class="menu-item">
+          <img
+            src="https://www.huongnghiepaau.com/wp-content/uploads/2022/11/keo-dai-loan.jpg"
+            alt="Cheese Taco"
+          />
+          <h3>Cheese Taco</h3>
+          <p>Crispy taco with melted cheese.</p>
+          <span class="price">$6.99</span>
+          <a href="#" class="order-btn">Order Now</a>
+        </div>
+        <div class="menu-item">
+          <img
+            src="https://www.huongnghiepaau.com/wp-content/uploads/2020/11/takoyaki-noi-tieng.jpg"
+            alt="Spicy Taco"
+          />
+          <h3>Spicy Taco</h3>
+          <p>For those who love a spicy kick!</p>
+          <span class="price">$7.49</span>
+          <a href="#" class="order-btn">Order Now</a>
+        </div>
+        <div class="menu-item">
+          <img
+            src="https://www.huongnghiepaau.com/wp-content/uploads/2020/11/takoyaki-noi-tieng.jpg"
+            alt="Spicy Taco"
+          />
+          <h3>Spicy Taco</h3>
+          <p>For those who love a spicy kick!</p>
+          <span class="price">$7.49</span>
+          <a href="#" class="order-btn">Order Now</a>
         </div>
       </div>
-
-      <div class="menu-category">
-        <h2>Sides & Drinks</h2>
-        <div class="menu-items">
-          <div class="menu-item" data-id="7">
-            <img src="https://via.placeholder.com/300x200" alt="Nachos" />
-            <div class="menu-item-details">
-              <h3>Loaded Nachos</h3>
-              <p class="description">
-                Crispy tortilla chips topped with melted cheese, beans,
-                jalapeños, sour cream, and guacamole.
-              </p>
-              <div class="price-order">
-                <p class="price">$6.99</p>
-                <button class="add-to-cart">Add to Order</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="menu-item" data-id="8">
-            <img src="https://via.placeholder.com/300x200" alt="Horchata" />
-            <div class="menu-item-details">
-              <h3>Horchata</h3>
-              <p class="description">
-                Traditional Mexican rice drink flavored with cinnamon and
-                vanilla.
-              </p>
-              <div class="price-order">
-                <p class="price">$2.99</p>
-                <button class="add-to-cart">Add to Order</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="menu-item" data-id="9">
-            <img src="https://via.placeholder.com/300x200" alt="Mexican Soda" />
-            <div class="menu-item-details">
-              <h3>Mexican Soda</h3>
-              <p class="description">
-                Assorted flavors of authentic Mexican sodas.
-              </p>
-              <div class="price-order">
-                <p class="price">$2.49</p>
-                <button class="add-to-cart">Add to Order</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
+    </section>
 
     <!-- Footer -->
-    <footer>
-      <div class="footer-content">
-        <div class="contact-info">
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-info">
           <h3>Contact Us</h3>
-          <p><strong>Address:</strong> 123 Taco Street, Ho Chi Minh City</p>
-          <p><strong>Phone:</strong> (028) 1234-5678</p>
-          <p><strong>Email:</strong> info@tacodelights.com</p>
+          <p>
+            <strong>Address:</strong> 123 Main Street, District 1, Ho Chi Minh
+            City
+          </p>
+          <p><strong>Phone:</strong> +84 123 456 789</p>
+          <p><strong>Email:</strong> contact@tacodelights.com</p>
         </div>
-        <div class="opening-hours">
-          <h3>Opening Hours</h3>
-          <p>Monday - Friday: 10:00 AM - 10:00 PM</p>
-          <p>Saturday - Sunday: 11:00 AM - 11:00 PM</p>
-        </div>
-        <div class="social-media">
+        <div class="footer-social">
           <h3>Follow Us</h3>
-          <div class="social-icons">
-            <a href="#" class="social-icon">FB</a>
-            <a href="#" class="social-icon">IG</a>
-            <a href="#" class="social-icon">TW</a>
-          </div>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
         </div>
-      </div>
-      <div class="copyright">
-        <p>&copy; 2025 Taco Delights. All rights reserved.</p>
       </div>
     </footer>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/handleNav.js"></script>
+    <script src="/js/order.js"></script>
   </body>
 </html>

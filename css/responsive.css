@@ -116,6 +116,62 @@
   .video iframe {
     height: 200px;
   }
+
+  /* confirm order */
+  .order-container {
+    flex-direction: column;
+  }
+
+  .order-list,
+  .order-form {
+    flex: unset;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .order-list h3,
+  .order-form h3 {
+    font-size: 1.6rem;
+  }
+
+  .order-summary .summary-row {
+    font-size: 1.2rem;
+  }
+
+  #subtotal,
+  #delivery-fee,
+  #total {
+    font-size: 1.4rem;
+  }
+
+  #delivery-form input,
+  #delivery-form select,
+  #delivery-form button {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .menu-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 20px;
+  }
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #000;
+  }
+  .navbar .nav-links.active {
+    display: flex;
+  }
+  .navbar .hamburger {
+    display: block;
+    cursor: pointer;
+  }
 }
 
 @media (max-width: 480px) {
@@ -144,5 +200,57 @@
   }
   .video iframe {
     height: 180px;
+  }
+
+  /* confirm order */
+  .page-title h2 {
+    font-size: 2rem;
+  }
+
+  .page-title p {
+    font-size: 1rem;
+  }
+
+  .order-list h3,
+  .order-form h3 {
+    font-size: 1.4rem;
+  }
+
+  #subtotal,
+  #delivery-fee,
+  #total {
+    font-size: 1.2rem;
+  }
+
+  #delivery-form input,
+  #delivery-form select,
+  #delivery-form button {
+    font-size: 0.8rem;
+  }
+
+  .menu-item img {
+    height: 150px;
+  }
+  .menu-container {
+    padding: 10px;
+  }
+  .logo img {
+    max-width: 160px;
+  }
+  .hero-text h1 {
+    font-size: 24px;
+  }
+  .yes,
+  .no {
+    margin: 30px 80px;
+  }
+  .footer-info {
+    text-align: left;
+  }
+  .footer-social h3 {
+    font-size: 20px;
+  }
+  .footer-social a {
+    margin: 0 5px;
   }
 }

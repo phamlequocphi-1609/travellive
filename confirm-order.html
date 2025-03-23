@@ -3,197 +3,151 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Taco Delights - Confirm Order</title>
+    <title>Confirm Order</title>
+
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/responsive.css" />
-    <script src="/js/script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
   <body>
     <!-- Header -->
-    <header>
-      <div class="logo">
-        <a href="index.html">
-          <img
-            src="https://via.placeholder.com/150x80"
-            alt="Taco Delights Logo"
-          />
-        </a>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="index.html">About Us</a></li>
-          <li><a href="menu.html">Menu</a></li>
-          <li>
-            <a href="/confirm-order.html" class="active">Confirm Order</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <!-- Main Content -->
-    <main class="order-container">
-      <h1>Confirm Your Order</h1>
-
-      <div class="order-content">
-        <div class="order-items">
-          <h2>Order Items</h2>
-          <div class="cart-empty-message" id="emptyCart">
-            <p>
-              Your cart is empty. Visit our <a href="menu.html">menu</a> to add
-              items.
-            </p>
+    <header
+      class="header"
+      style="
+        background: url('https://i.ex-cdn.com/vntravellive.com/files/news/2025/03/22/dai-tiec-banh-mi-viet-nam-bung-no-tai-le-hoi-banh-mi-tphcm-141038.jpg')
+          center/cover no-repeat;
+        height: 100vh;
+        position: relative;
+      "
+    >
+      <div class="overlay"></div>
+      <div class="container">
+        <nav class="navbar fixed">
+          <div class="logo">
+            <a href="/index.html"
+              ><img
+                src="https://sf.ex-cdn.com/vntravellive.com/v1.1.93/templates/themes/images/logo.png"
+                alt="Travellive Logo"
+            /></a>
           </div>
-
-          <div class="cart-items" id="cartItems">
-            <!-- Sample cart item (will be populated by JavaScript) -->
-            <div class="cart-item" data-id="1">
-              <div class="cart-item-details">
-                <h3>Classic Beef Taco</h3>
-                <p class="price">$3.99</p>
-              </div>
-              <div class="cart-item-controls">
-                <button class="decrease-quantity">-</button>
-                <span class="quantity">1</span>
-                <button class="increase-quantity">+</button>
-                <button class="remove-item">×</button>
-              </div>
-            </div>
-
-            <div class="cart-item" data-id="2">
-              <div class="cart-item-details">
-                <h3>Grilled Chicken Taco</h3>
-                <p class="price">$4.49</p>
-              </div>
-              <div class="cart-item-controls">
-                <button class="decrease-quantity">-</button>
-                <span class="quantity">2</span>
-                <button class="increase-quantity">+</button>
-                <button class="remove-item">×</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="order-summary">
-            <div class="summary-row">
-              <span>Subtotal:</span>
-              <span id="subtotal">$12.97</span>
-            </div>
-            <div class="summary-row">
-              <span>Tax (10%):</span>
-              <span id="tax">$1.30</span>
-            </div>
-            <div class="summary-row total">
-              <span>Total:</span>
-              <span id="total">$14.27</span>
-            </div>
+          <button class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="/index.html">About Us</a></li>
+            <li><a href="/menu.html">Menu</a></li>
+            <li><a href="/confirm-order.html">Confirm Order</a></li>
+            <li class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fa fa-search"></i></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="hero-text">
+          <h1>"Đại tiệc" bánh mì Việt Nam bùng nổ tại Lễ hội Bánh mì TP.HCM</h1>
+          <div class="cta-buttons">
+            <a href="#" class="yes">
+              <p><span>Yes</span></p>
+              <p>Take</p>
+              <p>me there</p>
+            </a>
+            <a href="#" class="no">
+              <p><span>No</span></p>
+              <p>Where</p>
+              <p>Else?</p>
+            </a>
           </div>
         </div>
-
-        <div class="customer-info">
-          <h2>Your Information</h2>
-          <form id="orderForm">
-            <div class="form-group">
-              <label for="name">Full Name:</label>
-              <input type="text" id="name" name="name" required />
-              <span class="error-message" id="nameError"></span>
+      </div>
+    </header>
+    <!-- confirm order -->
+    <main class="main-content">
+      <div class="container">
+        <div class="page-title">
+          <h2>Confirm Your Order</h2>
+          <p>Review your items before placing your order</p>
+        </div>
+        <div class="order-container">
+          <div class="order-list">
+            <h3>Your Items</h3>
+            <div id="order-items"></div>
+            <div class="order-summary">
+              <div class="summary-row">
+                <span>Subtotal:</span><span id="subtotal">$0.00</span>
+              </div>
+              <div class="summary-row">
+                <span>Delivery Fee:</span><span id="delivery-fee">$2.00</span>
+              </div>
+              <div class="summary-row total">
+                <span>Total:</span><span id="total">$0.00</span>
+              </div>
             </div>
-
-            <div class="form-group">
-              <label for="phone">Phone Number:</label>
-              <input type="tel" id="phone" name="phone" required />
-              <span class="error-message" id="phoneError"></span>
-            </div>
-
-            <div class="form-group">
-              <label for="city">City:</label>
-              <select id="city" name="city" required>
+          </div>
+          <div class="order-form">
+            <h3>Delivery Information</h3>
+            <form id="delivery-form">
+              <input type="text" id="name" placeholder="Full Name" required />
+              <input
+                type="tel"
+                id="phone"
+                placeholder="Phone Number"
+                required
+              />
+              <input
+                type="email"
+                id="email"
+                placeholder="Email Address"
+                required
+              />
+              <select id="city">
                 <option value="">Select City</option>
-                <option value="ho-chi-minh">Ho Chi Minh City</option>
+                <option value="hcm">Ho Chi Minh City</option>
                 <option value="hanoi">Hanoi</option>
-                <option value="da-nang">Da Nang</option>
+                <option value="danang">Da Nang</option>
               </select>
-            </div>
-
-            <div class="form-group">
-              <label for="district">District:</label>
-              <select id="district" name="district" required disabled>
+              <select id="district">
                 <option value="">Select District</option>
               </select>
-            </div>
-
-            <div class="form-group">
-              <label for="address">Detailed Address:</label>
-              <input type="text" id="address" name="address" required />
-              <span class="error-message" id="addressError"></span>
-            </div>
-
-            <div class="form-group">
-              <label for="notes">Order Notes (Optional):</label>
-              <textarea id="notes" name="notes" rows="3"></textarea>
-            </div>
-
-            <div class="form-actions">
-              <button type="submit" id="orderButton" class="order-button">
-                Place Order
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <!-- Modal for confirmations -->
-      <div id="confirmationModal" class="modal">
-        <div class="modal-content">
-          <h3 id="modalTitle">Confirmation</h3>
-          <p id="modalMessage">Are you sure you want to remove this item?</p>
-          <div class="modal-actions">
-            <button id="modalConfirm">OK</button>
-            <button id="modalCancel">Cancel</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Success message modal -->
-      <div id="successModal" class="modal">
-        <div class="modal-content success">
-          <h3>Order Placed Successfully!</h3>
-          <p>
-            Thank you for your order. We'll prepare your delicious tacos right
-            away!
-          </p>
-          <div class="modal-actions">
-            <button id="successOk">OK</button>
+              <input
+                type="text"
+                id="address"
+                placeholder="Detailed Address"
+                required
+              />
+              <button type="button" id="place-order-btn">Place Order</button>
+            </form>
           </div>
         </div>
       </div>
     </main>
-
     <!-- Footer -->
-    <footer>
-      <div class="footer-content">
-        <div class="contact-info">
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-info">
           <h3>Contact Us</h3>
-          <p><strong>Address:</strong> 123 Taco Street, Ho Chi Minh City</p>
-          <p><strong>Phone:</strong> (028) 1234-5678</p>
-          <p><strong>Email:</strong> info@tacodelights.com</p>
+          <p>
+            <strong>Address:</strong> 123 Main Street, District 1, Ho Chi Minh
+            City
+          </p>
+          <p><strong>Phone:</strong> +84 123 456 789</p>
+          <p><strong>Email:</strong> contact@tacodelights.com</p>
         </div>
-        <div class="opening-hours">
-          <h3>Opening Hours</h3>
-          <p>Monday - Friday: 10:00 AM - 10:00 PM</p>
-          <p>Saturday - Sunday: 11:00 AM - 11:00 PM</p>
-        </div>
-        <div class="social-media">
+        <div class="footer-social">
           <h3>Follow Us</h3>
-          <div class="social-icons">
-            <a href="#" class="social-icon">FB</a>
-            <a href="#" class="social-icon">IG</a>
-            <a href="#" class="social-icon">TW</a>
-          </div>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
         </div>
-      </div>
-      <div class="copyright">
-        <p>&copy; 2025 Taco Delights. All rights reserved.</p>
       </div>
     </footer>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/order.js"></script>
+    <script src="/js/handleNav.js"></script>
   </body>
 </html>
