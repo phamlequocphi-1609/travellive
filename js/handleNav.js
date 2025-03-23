@@ -32,4 +32,27 @@ if (currentPath.includes("menu.html")) {
         </a>
       `;
   }
+} else if (currentPath.includes("confirm-order.html")) {
+  const header = document.querySelector(".header");
+  const heroText = document.querySelector(".hero-text h1");
+  const ctaButtons = document.querySelector(".cta-buttons");
+
+  header.style.background =
+    "url('https://danviet.mediacdn.vn/upload/3-2018/images/2018-09-17/Nhung-mon-an-Mexico-hap-dan-nhat-2-1537156739-width700height465.jpg') center/cover no-repeat";
+
+  if (heroText) {
+    heroText.textContent = "Xác nhận đơn hàng của bạn";
+  }
+  if (ctaButtons) {
+    ctaButtons.innerHTML = `
+        <a href="/confirm-order.html" class="yes" style="padding: 24px">
+          <p><span>Order</span></p>
+          <p>Now</p>
+        </a>
+        <a href="/index.html" class="no" style="padding: 24px">
+          <p><span>Back</span></p>
+          <p>Home</p>
+        </a>
+      `;
+  }
 }
