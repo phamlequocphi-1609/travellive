@@ -92,33 +92,40 @@
             <h3>Delivery Information</h3>
             <form id="delivery-form">
               <input type="text" id="name" placeholder="Full Name" required />
+              <p class="error-message"></p>
               <input
                 type="tel"
                 id="phone"
                 placeholder="Phone Number"
                 required
               />
+              <p class="error-message"></p>
               <input
                 type="email"
                 id="email"
                 placeholder="Email Address"
                 required
               />
+              <p class="error-message"></p>
               <select id="city">
                 <option value="">Select City</option>
                 <option value="hcm">Ho Chi Minh City</option>
                 <option value="hanoi">Hanoi</option>
                 <option value="danang">Da Nang</option>
               </select>
+              <p class="error-message"></p>
               <select id="district">
                 <option value="">Select District</option>
+                <option value="">Quận 1</option>
               </select>
+              <p class="error-message"></p>
               <input
                 type="text"
                 id="address"
                 placeholder="Detailed Address"
                 required
               />
+              <p class="error-message"></p>
               <button type="button" id="place-order-btn">Place Order</button>
             </form>
           </div>

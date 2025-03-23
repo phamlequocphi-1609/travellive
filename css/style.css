@@ -805,3 +805,15 @@
 .order-btn:hover {
   background-color: #e55a00;
 }
+
+.error-message {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 5px;
+  display: block;
+  color: red !important;
+}
+#delivery-form input,
+#delivery-form select {
+  outline: none;
+}
